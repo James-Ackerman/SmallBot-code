@@ -1,6 +1,6 @@
 #include "main.h"
 //#include "okapi/api.hpp"
-#include "definitions.hpp"
+//#include "definitions.hpp"
 //using namespace okapi; //
 
 //TODO: check syntax for ControllerButton for R1/R2/L1/L2/Down/left/right buttons
@@ -66,7 +66,7 @@ void opcontrol() {
          intake.move_voltage(0);
          intake.move_voltage(0);
      }
-     ///////////////////////////////INDEXER////////////////////////////////////
+     ///////////////////////////////INDEXER//////////////////////////////////////
      if (LeftBumperDOWN.isPressed())
      {
          indexer.move_voltage(12000);

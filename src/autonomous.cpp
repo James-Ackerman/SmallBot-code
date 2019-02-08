@@ -1,7 +1,4 @@
 #include "main.h"
-//#include "okapi/api.hpp"
-//#include "definitions.hpp"
-//using namespace okapi;
 
 /**
  * Runs the user autonomous code. This function will be started in its own task
@@ -16,7 +13,9 @@
  */
 void autonomous() {
 
-  //IntakeR.move_voltage(12000);
+  intake.move_voltage(12000);
+  pros::delay(1000);
+  intake.move_voltage(0);
   //pros::delay(500);
   // state != state;
   // sensor.set_value(state);
