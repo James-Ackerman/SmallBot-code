@@ -28,11 +28,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/initialize.cpp.o",
-            "src\\initialize.cpp"
+            "bin/definitions.cpp.o",
+            "src\\definitions.cpp"
         ],
         "directory": "C:\\Users\\James Ackerman\\Desktop\\VexU\\Codigo Vex\\PROS\\SmallBot Test2",
-        "file": "src\\initialize.cpp"
+        "file": "src\\definitions.cpp"
     },
     {
         "arguments": [
@@ -98,11 +98,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/definitions.cpp.o",
-            "src\\definitions.cpp"
+            "bin/initialize.cpp.o",
+            "src\\initialize.cpp"
         ],
         "directory": "C:\\Users\\James Ackerman\\Desktop\\VexU\\Codigo Vex\\PROS\\SmallBot Test2",
-        "file": "src\\definitions.cpp"
+        "file": "src\\initialize.cpp"
     },
     {
         "arguments": [

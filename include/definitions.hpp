@@ -38,10 +38,13 @@
 
  // Controller object creation
  //TODO: Reverse motors that need to be reversed
+
+inline AbstractMotor::GearsetRatioPair torqueTrans = AbstractMotor::gearset::green*(5.0/3.0);
+inline AbstractMotor::GearsetRatioPair speedTrans = AbstractMotor::gearset::green*(3.0/5.0);
 inline auto driveController = ChassisControllerFactory::create(
    {DRIVE_MOTOR_RIGHT_1, DRIVE_MOTOR_RIGHT_2, DRIVE_MOTOR_RIGHT_3},
    {DRIVE_MOTOR_LEFT_1, DRIVE_MOTOR_LEFT_2, DRIVE_MOTOR_LEFT_3},
-   AbstractMotor::gearset::green,
+   speedTrans,
    {WHEEL_DIAMETER, CHASSIS_WIDTH}
  );
 

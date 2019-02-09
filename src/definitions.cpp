@@ -1,5 +1,20 @@
 #include "definitions.hpp"
 
+float           motor_velocity;         ///< current velocity in rpm
+
+// TBH control algorithm variables
+long            target_velocity;        ///< target_velocity velocity
+float           current_error;          ///< error between actual and target_velocity velocities
+float           last_error;             ///< error last time update called
+float           gain;                   ///< gain
+float           drive;                  ///< final drive out of TBH (0.0 to 1.0)
+float           drive_at_zero;          ///< drive at last zero crossing
+long            first_cross;            ///< flag indicating first zero crossing
+float           drive_approx;           ///< estimated open loop drive
+// final motor drive
+long            motor_drive;            ///< final motor control value//
+
+
 void FwMotorSet( int value )
 {
     flywheel.move_voltage(value);

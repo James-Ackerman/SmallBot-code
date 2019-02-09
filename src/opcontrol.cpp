@@ -40,12 +40,12 @@ void opcontrol() {
      // pros::lcd::initialize();
      // pros::lcd::print(0, "Joystick valY: %d", controller.getAnalog(ControllerAnalog::leftY));
      // pros::lcd::print(0, "Joystick valX: %d", controller.getAnalog(ControllerAnalog::leftX));
-		 //////////////////////////////CHASSIS(DRIVE)///////////////////////////////
+		 //////////////////////////////CHASSIS(DRIVE)/////////////////////////////////
 
      driveController.arcade(controller.getAnalog(ControllerAnalog::leftY), -controller.getAnalog(ControllerAnalog::rightX));
 
      //////////////////////////////TRANSMISSION/////////////////////////////////
-     if (ButtonB.changedToPressed())
+     if (ButtonB.changedToPressed() && (abs(controller.getAnalog(ControllerAnalog::leftY) > 0.2)))//
      {
          STATE = !STATE;
          piston.set_value(STATE);
