@@ -101,7 +101,7 @@ void FwControlUpdateVelocityTbh()
  void FwControlTask(void* param)
 {
   // Set the gain
-  gain = 0.0011;   // Test with 0.0005  //0.002
+  gain = 0.0012;   // Test with 0.0005  //0.002
 
   while(1)
       {

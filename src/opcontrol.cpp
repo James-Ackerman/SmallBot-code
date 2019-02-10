@@ -45,7 +45,7 @@ void opcontrol() {
      driveController.arcade(controller.getAnalog(ControllerAnalog::leftY), -controller.getAnalog(ControllerAnalog::rightX));
 
      //////////////////////////////TRANSMISSION/////////////////////////////////
-     if (ButtonB.changedToPressed() && (abs(controller.getAnalog(ControllerAnalog::leftY) > 0.2)))//
+     if (ButtonB.changedToPressed() && (abs(controller.getAnalog(ControllerAnalog::leftY) > 0.4)))//
      {
          STATE = !STATE;
          piston.set_value(STATE);
@@ -102,7 +102,16 @@ void opcontrol() {
 
 		 /////////////////////////////////DESCORER//////////////////////////////////////
 
-				 descorer.move_voltage(12000*controller.getAnalog(ControllerAnalog::rightY));
+
+      // if (descorer.getPosition() > 50)
+      //   {
+      //      descorer.move_voltage(-500);
+      //    }
+      // else if
+      // else
+      // {
+        descorer.move_voltage(12000*controller.getAnalog(ControllerAnalog::rightY));
+      //}
 
 		 pros::Task::delay(20);
 	 }
